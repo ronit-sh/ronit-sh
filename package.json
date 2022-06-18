@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"pnpm dev:css\" \"remix build && run-p dev:*\"",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
+    "dev:remix": "remix watch",
+    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
+    "test": "prettier --write . && eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "cross-env NODE_ENV=production npm run dev:wrangler"
+  },
+  "dependencies": {
+    "@remix-run/cloudflare": "latest",
+    "@remix-run/cloudflare-pages": "latest",
+    "@remix-run/react": "latest",
+    "cross-env": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@cloudflare/workers-types": "latest",
+    "@remix-run/dev": "latest",
+    "@remix-run/eslint-config": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "concurrently": "latest",
+    "daisyui": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "npm-run-all": "latest",
+    "postcss": "latest",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "wrangler": "latest"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
