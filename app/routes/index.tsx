@@ -8,7 +8,10 @@ const Index = () => (
           <div className="avatar">
             <div className="w-24 rounded-full ring ring-primary-focus ring-offset-primary ring-offset-2 animation">
               <a href="https://github.com/ronit-sh">
-                <img src="https://avatars.githubusercontent.com/u/98030646" alt="Primary" />
+                <img
+                  src="https://avatars.githubusercontent.com/u/98030646"
+                  alt="Github"
+                />
               </a>
             </div>
           </div>
@@ -16,7 +19,7 @@ const Index = () => (
         content={
           <>
             <h1 className="text-3xl font-bold text-primary-content animation">
-              RONIT KUMAR
+              <a href="https://github.com/ronit-sh">RONIT KUMAR</a>
             </h1>
             <p className="text-primary-content animation">
               Director,
