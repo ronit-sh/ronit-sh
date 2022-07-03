@@ -7,3 +7,4 @@ app/styles/*
 /functions/\[\[path\]\].js.map
 /public/build
 .env
+/cypress/videos
