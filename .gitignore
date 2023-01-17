@@ -1,10 +1,11 @@
 node_modules
-app/styles/*
-.idea/
-.node-version
+
 /.cache
 /functions/\[\[path\]\].js
 /functions/\[\[path\]\].js.map
 /public/build
 .env
-/cypress/videos
+node_modules
+/build
+
+.idea

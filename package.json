@@ -3,48 +3,41 @@
   "sideEffects": false,
   "scripts": {
     "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
-    "dev": "concurrently \"pnpm dev:css\" \"remix build && run-p dev:*\"",
-    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "dev:remix": "remix watch",
-    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
-    "test": "prettier --write . && eslint --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "cross-env NODE_ENV=production npm run dev:wrangler"
+    "dev:wrangler": "cross-env NODE_ENV=development npm run wrangler",
+    "dev": "npm-run-all build --parallel \"dev:*\"",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
+    "postinstall": "remix setup node",
+    "start": "cross-env NODE_ENV=production npm run wrangler",
+    "typecheck": "tsc",
+    "wrangler": "wrangler pages dev --compatibility-date=2023-06-21 ./public"
   },
   "dependencies": {
     "@remix-run/cloudflare": "latest",
     "@remix-run/cloudflare-pages": "latest",
+    "@remix-run/css-bundle": "latest",
     "@remix-run/react": "latest",
     "cross-env": "latest",
+    "isbot": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
   "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/preset-env": "latest",
-    "@babel/preset-react": "latest",
     "@cloudflare/workers-types": "latest",
     "@remix-run/dev": "latest",
     "@remix-run/eslint-config": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "concurrently": "latest",
-    "cypress": "latest",
-    "daisyui": "latest",
     "eslint": "latest",
-    "eslint-config-prettier": "latest",
-    "eslint-plugin-cypress": "latest",
     "npm-run-all": "latest",
-    "postcss": "latest",
-    "prettier": "latest",
-    "prettier-plugin-tailwindcss": "latest",
-    "start-server-and-test": "latest",
-    "tailwindcss": "latest",
     "typescript": "latest",
-    "wrangler": "latest"
+    "wrangler": "latest",
+    "daisyui": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "tailwindcss": "latest"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18.16.0"
   }
 }

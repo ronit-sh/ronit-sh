@@ -1,22 +1,14 @@
+import {Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration,} from "@remix-run/react";
+import type {LinksFunction, V2_MetaFunction} from "@remix-run/cloudflare";
+import {useEffect, useState} from "react";
 import styles from "./styles/app.css";
-import type { MetaFunction } from "@remix-run/cloudflare";
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
-import { useEffect, useState } from "react";
-import type { LinksFunction } from "@remix-run/react/routeModules";
 
-export const meta: MetaFunction = () => ({
+export const meta: V2_MetaFunction = () => ([{
   charset: "utf-8",
   title: "Ronit Kumar",
   description: "Dreamer",
   viewport: "width=device-width,initial-scale=1",
-});
+}]);
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -36,7 +28,7 @@ export const links: LinksFunction = () => [
   },
 ];
 
-const App = () => {
+const App= () => {
   const [counter, setCounter] = useState(0);
   const themes = ["night", "dracula", "halloween", "luxury", "coffee"];
   const theme = themes[counter];
@@ -48,6 +40,8 @@ const App = () => {
   return (
     <html lang="en" data-theme={theme} className="font-body font-medium">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
@@ -59,6 +53,6 @@ const App = () => {
       </body>
     </html>
   );
-};
+}
 
-export default App;
+export default App
