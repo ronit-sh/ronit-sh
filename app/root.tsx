@@ -1,20 +1,21 @@
-import {Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration,} from "@remix-run/react";
-import type {LinksFunction, V2_MetaFunction} from "@remix-run/cloudflare";
+import type { LinksFunction } from "@remix-run/cloudflare";
+import stylesheet from "./tailwind.css";
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+} from "@remix-run/react";
 import {useEffect, useState} from "react";
-import styles from "./styles/app.css";
-
-export const meta: V2_MetaFunction = () => ([{
-  charset: "utf-8",
-  title: "Ronit Kumar",
-  description: "Dreamer",
-  viewport: "width=device-width,initial-scale=1",
-}]);
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: stylesheet },
   {
     rel: "icon",
     href: "https://img.icons8.com/dusk/64/000000/linux.png",
+    type: "image/png",
   },
   { rel: "preload", href: "https://fonts.googleapis.com" },
   {
@@ -28,7 +29,7 @@ export const links: LinksFunction = () => [
   },
 ];
 
-const App= () => {
+export default function App() {
   const [counter, setCounter] = useState(0);
   const themes = ["night", "dracula", "halloween", "luxury", "coffee"];
   const theme = themes[counter];
@@ -38,10 +39,10 @@ const App= () => {
   }, [counter, themes.length]);
 
   return (
-    <html lang="en" data-theme={theme} className="font-body font-medium">
+      <html lang="en" data-theme={theme} className="font-body font-medium">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
@@ -54,5 +55,3 @@ const App= () => {
     </html>
   );
 }
-
-export default App
