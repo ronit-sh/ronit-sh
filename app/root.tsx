@@ -8,7 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -39,7 +39,7 @@ export default function App() {
   }, [counter, themes.length]);
 
   return (
-      <html lang="en" data-theme={theme} className="font-body font-medium">
+    <html lang="en" data-theme={theme} className="font-body font-medium">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
