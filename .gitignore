@@ -8,3 +8,5 @@ node_modules
 
 .idea
 /functions
+.wrangler
+.DS_Store

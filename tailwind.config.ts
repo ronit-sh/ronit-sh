@@ -9,6 +9,9 @@ export default {
     extend: {},
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["night", "dracula", "halloween", "luxury", "coffee"],
+  },
 } satisfies Config
 
 
