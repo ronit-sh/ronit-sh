@@ -7,21 +7,35 @@ jobs:
   cypress-run:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    if: github.event.deployment_status.state == 'success'
+    if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2.2.2
         with:
           version: latest
           run_install: |
-            - args: [cypress]
+            - args: [cypress process]
 
       - name: Cypress run
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v6
         with:
+          record: true
           install: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

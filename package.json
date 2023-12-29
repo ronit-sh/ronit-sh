@@ -6,7 +6,7 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual -c \"npm run start\"",
-    "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
+    "start": "wrangler pages dev ./public",
     "typecheck": "tsc",
     "pages:deploy": "npm run build && wrangler pages deploy ./public"
   },
@@ -14,7 +14,7 @@
     "@remix-run/cloudflare": "latest",
     "@remix-run/cloudflare-pages": "latest",
     "@remix-run/react": "latest",
-    "isbot": "latest",
+    "isbot": "next",
     "react": "latest",
     "react-dom": "latest"
   },
@@ -24,6 +24,7 @@
     "@remix-run/eslint-config": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "cypress": "latest",
     "eslint": "latest",
     "daisyui": "latest",
     "prettier-plugin-tailwindcss": "latest",
