@@ -14,7 +14,7 @@
     "@remix-run/cloudflare": "latest",
     "@remix-run/cloudflare-pages": "latest",
     "@remix-run/react": "latest",
-    "isbot": "next",
+    "isbot": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
