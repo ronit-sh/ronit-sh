@@ -17,7 +17,7 @@ const Index = () => (
             <div className="w-24 rounded-full ring ring-primary-focus ring-offset-primary ring-offset-2 animation">
               <a href="https://github.com/ronit-sh">
                 <img
-                  src="https://avatars.githubusercontent.com/u/98030646"
+                  src="https://github.com/ronit-sh.png"
                   alt="Github"
                 />
               </a>
