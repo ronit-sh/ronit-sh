@@ -38,14 +38,14 @@ const Index = () => (
                 SivaShakti FutureTech
               </a>
             </p>
-            <p className="text-lg text-primary-content animation mt-4">
+            <p className="text-2xl text-primary-content animation mt-6">
               विद्या ददाति विनयं विनयाद्याति पात्रताम् ।
             </p>
             <p className="text-lg text-primary-content animation">
               Education leads to sensibility, sensibility attains
               character/qualification;
             </p>
-            <p className="text-lg text-primary-content animation mt-2">
+            <p className="text-2xl text-primary-content animation mt-4">
               पात्रत्वाद्धनमाप्नोति धनाद्धर्मं ततः सुखम् ॥
             </p>
             <p className="text-lg text-primary-content animation">

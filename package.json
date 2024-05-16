@@ -25,7 +25,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "cypress": "latest",
-    "eslint": "latest",
+    "eslint": "8.57.0",
     "daisyui": "latest",
     "prettier-plugin-tailwindcss": "latest",
     "tailwindcss": "latest",
