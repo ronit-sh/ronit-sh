@@ -1,9 +1,0 @@
-node_modules
-
-/build
-/public/build
-.env
-/functions/\[\[path\]\].js
-/functions/\[\[path\]\].js.map
-/app/styles/app.css
-pnpm-lock.yaml

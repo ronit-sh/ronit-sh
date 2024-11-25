@@ -1,38 +1,36 @@
 {
-  "name": "ronit-sh",
-  "private": true,
-  "sideEffects": false,
-  "type": "module",
-  "scripts": {
-    "build": "remix build",
-    "dev": "remix dev --manual -c \"npm run start\"",
-    "start": "wrangler pages dev ./public",
-    "typecheck": "tsc",
-    "pages:deploy": "npm run build && wrangler pages deploy ./public"
-  },
-  "dependencies": {
-    "@remix-run/cloudflare": "latest",
-    "@remix-run/cloudflare-pages": "latest",
-    "@remix-run/react": "latest",
-    "isbot": "latest",
-    "react": "latest",
-    "react-dom": "latest"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "latest",
-    "@remix-run/dev": "latest",
-    "@remix-run/eslint-config": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "cypress": "latest",
-    "eslint": "8.57.0",
-    "daisyui": "latest",
-    "prettier-plugin-tailwindcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest",
-    "wrangler": "latest"
-  },
-  "engines": {
-    "node": ">=20.10.0"
-  }
+	"name": "ronit-sh",
+	"private": true,
+	"sideEffects": false,
+	"type": "module",
+	"scripts": {
+		"build": "remix build",
+		"dev": "remix dev --manual -c \"npm run start\"",
+		"start": "wrangler pages dev ./public",
+		"typecheck": "tsc",
+		"pages:deploy": "npm run build && wrangler pages deploy ./public"
+	},
+	"dependencies": {
+		"@remix-run/cloudflare": "latest",
+		"@remix-run/cloudflare-pages": "latest",
+		"@remix-run/react": "latest",
+		"isbot": "latest",
+		"react": "latest",
+		"react-dom": "latest"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "latest",
+		"@cloudflare/workers-types": "latest",
+		"@remix-run/dev": "latest",
+		"@types/react": "latest",
+		"@types/react-dom": "latest",
+		"cypress": "latest",
+		"daisyui": "latest",
+		"tailwindcss": "latest",
+		"typescript": "latest",
+		"wrangler": "latest"
+	},
+	"engines": {
+		"node": ">=20.10.0"
+	}
 }

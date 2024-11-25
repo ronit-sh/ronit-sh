@@ -1,14 +1,9 @@
-# 👋
+# 🌐 [ronit.sh](https://ronit.sh)
 
-## 🌐 [ronit.sh](https://ronit.sh)
+```
+विद्या ददाति विनयं विनयाद्याति पात्रताम् ।
+पात्रत्वाद्धनमाप्नोति धनाद्धर्मं ततः सुखम् ॥
+```
 
-[![GitHub](https://img.shields.io/github/license/ronit-sh/ronit-sh)](./LICENSE)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 
-## 🚀
 
-- [Remix](https://remix.run)
-- [Cloudflare Pages](https://pages.cloudflare.com)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [daisyUI](https://daisyui.com/)
-- [pnpm](https://pnpm.io/)
