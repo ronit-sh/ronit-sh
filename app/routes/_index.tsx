@@ -3,7 +3,7 @@ import { Card } from "~/components/cards";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Ronit Kumar" },
+    { title: "रौनित" },
     { name: "description", content: "Dreamer" },
   ];
 };
