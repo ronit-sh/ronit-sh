@@ -4,6 +4,6 @@
 
 @layer components {
 	.animation {
-		@apply transition duration-[2000ms] ease-in;
-	}
+		 @apply transition duration-[2000ms] ease-in;
+	 }
 }
