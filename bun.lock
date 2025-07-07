@@ -4,7 +4,6 @@
     "": {
       "name": "react-router",
       "dependencies": {
-        "@cloudflare/vite-plugin": "latest",
         "@react-router/node": "latest",
         "@react-router/serve": "latest",
         "isbot": "latest",
@@ -13,6 +12,7 @@
       },
       "devDependencies": {
         "@biomejs/biome": "latest",
+        "@cloudflare/vite-plugin": "latest",
         "@react-router/dev": "latest",
         "@tailwindcss/vite": "latest",
         "@types/node": "latest",
@@ -23,6 +23,7 @@
         "typescript": "latest",
         "vite": "latest",
         "vite-tsconfig-paths": "latest",
+        "wrangler": "latest",
       },
     },
   },
