@@ -10,3 +10,4 @@ node_modules
 /functions
 .wrangler
 .DS_Store
+.react-router
